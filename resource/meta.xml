@@ -1,0 +1,18 @@
+<meta>
+	<info name ="website" description="functions for website" version="1.0" type="script" author="Ahmed Ly"/>
+	<script src="share.lua" type="server" />
+	<script src="debug.lua" type="server" />
+     <export function="getAllPlayersName" http="true" />
+	 <export function="getServerN" http="true" />
+	 <export function="getAllPlayersWhoHaveAdmin" http="true" />
+	 <export function="getPlayersAlive" http="true" />
+	 <export function="getAllPlayersWithIp" http="true" />
+	 <export function="getTeamsonServer" http="true" />
+	 <export function="getPlayersDead" http="true" />
+	 <export function="getAllbugs" http="true" />
+	 <export function="getfullVersionServer" http="true" />
+	<export function="getSeverIpp" http="true" />
+	<export function="getMaxPlayersInServer" http="true" />
+	<export function="getAllAccountsInServer" http="true" />
+	<export function="getAllAccountsIDsInServer" http="true" />
+</meta>
