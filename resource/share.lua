@@ -1,3 +1,5 @@
+server = "website"
+
 function getAllPlayersName ()
     for i, player in ipairs(getElementsByType("player")) do
     if player then 
@@ -147,3 +149,51 @@ function getAllAccountsInServer ()
    return "There is No Accounts On Server !"
       end 
     end 
+                        
+ 
+
+    function serverKickPlayer (playerName, reason)
+   local player = getPlayerFromName(playerName)
+     if player then 
+      if kickPlayer(player, reason) then
+      return "Has Been Kick "..getPlayerName(player).." By "..server..""
+      else
+      return "There is something Error"
+      end
+    else 
+    return "Player not found"
+    end 
+    end
+    
+
+
+    
+function serverBanPlayer (playerName, reason, duration)
+ if getPlayerFromName(playerName) then 
+	if duration then
+duration = duration * 3600
+	else
+duration = 0
+ end
+ if banPlayer(getPlayerFromName(playerName), false, false, true, getRootElement(), reason, duration) then
+return "Has Been Banned "..getPlayerName(getPlayerFromName(playerName)).." By "..server..""
+else 
+return "There is something Error"
+ end
+else 
+ return "Player not found"
+ end
+end  
+
+
+function getlistBans ()
+  local list = getBans() 
+for k, v in ipairs ( list ) do
+    if v then 
+    local name = getBanNick(v)
+return " "..name.." "
+  else 
+ return "there no Player Have Ban On Server"
+        end 
+     end
+end
