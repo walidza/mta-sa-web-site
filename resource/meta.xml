@@ -15,4 +15,7 @@
 	<export function="getMaxPlayersInServer" http="true" />
 	<export function="getAllAccountsInServer" http="true" />
 	<export function="getAllAccountsIDsInServer" http="true" />
+	<export function="serverKickPlayer" http="true" />
+	<export function="serverBanPlayer" http="true" />
+	<export function="getlistBans" http="true" />
 </meta>
