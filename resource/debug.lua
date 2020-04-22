@@ -24,3 +24,16 @@ if opendebug then
     return ""..bugs..""
        end 
 end
+
+
+addEventHandler("onResourceStart",resourceRoot, function (resource)
+local nameResource = getResourceName(resource)
+ if  hasObjectPermissionTo (resource, "resource."..nameResource.."") then 
+ outputChatBox("the Resource Was Started",root,0,255,0)
+return true
+else 
+ outputChatBox("تم ايقاف المود يجب وضع المود ف اقروب الادمن",root,255,0,0)
+return false
+end 
+end 
+    
